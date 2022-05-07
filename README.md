@@ -7,14 +7,14 @@ This project contains information about hacking the Fujitsu Zero Client DZ22-2
 
 This is an 22 in LCD monitor with a built in Pano device similar to the [Rev B G2](https://github.com/tomverbeure/panologic-g2/wiki/Identifying-different-Pano-generations-and-revisions#second-generation).  
 Please see Tom Verbeure's reverse engineering [project](https://github.com/tomverbeure/panologic-g2)
-for the G2 and the [Pano Hacker's Wiki](https://github.com/tomverbeure/panologic-g2/wiki#community)
+for the G2 and the [Pano Hacker's Wiki](https://github.com/tomverbeure/panologic-g2/wiki)
 for additional information.
 
 ## Features
 
-- Base on the largest FPGA in Spartan 6 family with 147,443k equivalent logic cells
+- Based on the largest FPGA in the Spartan 6 family with 147,443k equivalent logic cells
 - 1680 x 1050 pixels TFT LCD display with LED back lighting
-- Swivel mount provides landscape or portrait orientation
+- Swivel mount providing landscape or portrait orientation
 - PoE (Power over Ethernet)
 - Build in speakers with volume control
 - 3.5 mm jack sockets for headphones **and** microphone.
@@ -36,7 +36,7 @@ interfaces.
 Interestingly the NT68667FG includes a 8031 processor which handles the OSD
 display for screen adjustments was well as volume and power control.
 
-The firmware for the NT68667FG appears to be store externally in an 128K I2C 
+The firmware for the NT68667FG appears to be store externally in an 128K SPI 
 flash [chip](./Pm25LV010.pdf). There really shouldn't be any need to hack the 
 controller's firmware, but that might be a fun project if someone is interested.  
 
@@ -51,16 +51,10 @@ supports it the 8031 ...
 
 ## Links
 
+- Pano Hacker's [Wiki](https://github.com/tomverbeure/panologic-g2/wiki)
 - [PCB pictures](https://github.com/zsteva/panologic-fujitsu) take by Zeljko Stevanovic
 - [User Manual](./assets/4503673.pdf)
 - [Citrix XenDesktop Manual](./assets/62122223.pdf)
-- [SGM7222 spec sheet](./assets/1640934749.pdf)
+- SGM7222 USB switch [spec sheet](./assets/1640934749.pdf)
 - [NT68667FG spec sheet](./assets/NT68667FG_Novatek.pdf)
-- [video](https://www.youtube.com/watch?v=FunpjWlPepY) showing how to open it.
-
-## Fujitsu Zero Client DZ19-2
-
-This is an 19 in LCD monitor with a built in Pano device similar to the G2.  
-This one is so rare that I can't even find a picture of one on the Internet,
-I wonder if it was actually produced.
-
+- [Youtube video](https://www.youtube.com/watch?v=FunpjWlPepY) showing how to open it.
