@@ -49,6 +49,63 @@ procedure.
 I was unable to find any information about programming the 8031, but Ghidra
 supports it the 8031 ...
 
+## EDID Info
+
+The [i2cedidtest](https://github.com/skiphansen/pano_progfpga/blob/master/TestCommands.md#i2cedidtest) test
+command dumps the EDID data for the LCD.  Once dumped [edid-decode](https://git.linuxtv.org/edid-decode.git) can
+be used to decode it.
+```
+skip@Dell-7040:~/pano/edid-decode$ ./edid-decode dz22-2.hex
+edid-decode (hex):
+
+00 ff ff ff ff ff ff 00 1a b3 83 07 01 00 00 00
+1b 15 01 03 80 2f 1e 78 2a c6 65 a0 59 58 9d 27
+0e 50 54 01 08 00 81 00 95 00 01 01 01 01 01 01
+01 01 01 01 01 01 21 39 90 30 62 1a 27 40 68 b0
+36 00 da 28 11 00 00 1c 00 00 00 fd 00 3b 3d 1f
+51 10 00 0a 20 20 20 20 20 20 00 00 00 fc 00 44
+5a 32 32 2d 32 0a 20 20 20 20 20 20 00 00 00 ff
+00 59 56 34 4b 30 30 30 30 30 31 0a 20 20 00 f6
+
+----------------
+
+Block 0, Base EDID:
+  EDID Structure Version & Revision: 1.3
+  Vendor & Product Identification:
+    Manufacturer: FUS
+    Model: 1923
+    Serial Number: 1
+    Made in: week 27 of 2011
+  Basic Display Parameters & Features:
+    Digital display
+    Maximum image size: 47 cm x 30 cm
+    Gamma: 2.20
+    DPMS levels: Off
+    RGB color display
+    First detailed timing is the preferred timing
+  Color Characteristics:
+    Red  : 0.6279, 0.3476
+    Green: 0.3447, 0.6152
+    Blue : 0.1533, 0.0566
+    White: 0.3134, 0.3291
+  Established Timings I & II:
+    DMT 0x09:   800x600    60.316541 Hz   4:3     37.879 kHz     40.000000 MHz
+    DMT 0x10:  1024x768    60.003840 Hz   4:3     48.363 kHz     65.000000 MHz
+  Standard Timings:
+    DMT 0x1c:  1280x800    59.810326 Hz  16:10    49.702 kHz     83.500000 MHz
+    DMT 0x2f:  1440x900    59.887445 Hz  16:10    55.935 kHz    106.500000 MHz
+  Detailed Timing Descriptors:
+    DTD 1:  1680x1050   59.954250 Hz   8:5     65.290 kHz    146.250000 MHz (474 mm x 296 mm)
+                 Hfront  104 Hsync 176 Hback  280 Hpol N
+                 Vfront    3 Vsync   6 Vback   30 Vpol P
+    Display Range Limits:
+      Monitor ranges (GTF): 59-61 Hz V, 31-81 kHz H, max dotclock 160 MHz
+    Display Product Name: 'DZ22-2'
+    Display Product Serial Number: 'YV4K000001'
+Checksum: 0xf6
+skip@Dell-7040:~/pano/edid-decode$
+```
+
 ## Links
 
 - Pano Hacker's [Wiki](https://github.com/tomverbeure/panologic-g2/wiki)
