@@ -110,6 +110,13 @@ Checksum: 0xf6
 skip@Dell-7040:~/pano/edid-decode$
 ```
 
+## Serial port
+
+Pano_ldr is based on Ultraembedded's SOC platform which includes the ability to 
+load firmware over a serial port which is VERY HANDY for code development.  
+
+The serial port appears on the HDMI connector.   Please see the [fpga_test_soc](https://github.com/skiphansen/fpga_test_soc/tree/master/fpga/panologic_g2#serial-port) for more information.
+
 ## Links
 
 - Pano Hacker's [Wiki](https://github.com/tomverbeure/panologic-g2/wiki)
