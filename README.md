@@ -10,6 +10,10 @@ Please see Tom Verbeure's reverse engineering [project](https://github.com/tomve
 for the G2 and the [Pano Hacker's Wiki](https://github.com/tomverbeure/panologic-g2/wiki)
 for additional information.
 
+My [Pano_ldr](https://github.com/skiphansen/panog2_ldr) has been successfully installed
+and tested on the DZ22-2 **WITHOUT** opening the case.  In fact the DZ22-2 was my motivation 
+for writting it.
+
 ## Features
 
 - Based on the largest FPGA in the Spartan 6 family with 147,443k equivalent logic cells
