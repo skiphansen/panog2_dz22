@@ -26,6 +26,12 @@ for writting it.
 - DVI-D port for second monitor
 - digital screen controller with microprocessor for storing 12 different display modes
 
+## Differences from G2
+
+1. The red/green/blue LEDs on the G2 are not present, the LCD controller controls the LEDs behind the power switch.
+2. The G2's DVI output drives the LCD controller.
+3. The G2's mini HDMI second monitor connector is a DVI connector.
+
 ## LCD interface
 
 It appears that the DZ22 uses the same bitfile and basic design as a "normal" 
@@ -115,7 +121,7 @@ skip@Dell-7040:~/pano/edid-decode$
 Pano_ldr is based on Ultraembedded's SOC platform which includes the ability to 
 load firmware over a serial port which is VERY HANDY for code development.  
 
-The serial port appears on the HDMI connector.   Please see the [fpga_test_soc](https://github.com/skiphansen/fpga_test_soc/tree/master/fpga/panologic_g2#serial-port) for more information.
+The serial port appears on the external monitor DVI connector.   Please see the [fpga_test_soc](https://github.com/skiphansen/fpga_test_soc/tree/master/fpga/panologic_g2#serial-port) for more information.
 
 ## Links
 
