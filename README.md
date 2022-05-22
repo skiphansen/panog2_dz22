@@ -26,6 +26,13 @@ for writting it.
 - DVI-D port for second monitor
 - digital screen controller with microprocessor for storing 12 different display modes
 
+## Status
+Tom's test code for the G2 with minor modifications is working on both the LCD and the external 
+monitor @ 1080p.  Attempts to change the resolution to 640x480 and 1680x1050 have failed so far.  
+It's probably an cockpit error on my part.
+
+![](./assets/dz22_first_life.png)
+
 ## Differences from G2
 
 1. The red/green/blue LEDs on the G2 are not present, the LCD controller controls the LEDs behind the power switch.
