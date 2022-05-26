@@ -37,7 +37,10 @@ It's probably an cockpit error on my part.
 
 1. The red/green/blue LEDs on the G2 are not present, the LCD controller controls the LEDs behind the power switch.
 2. The G2's DVI output drives the LCD controller.
-3. The G2's mini HDMI second monitor connector is a DVI connector.
+3. The G2's mini HDMI second monitor is replaced with a DVI connector.
+4. Instead of a single tiny speaker there are two speakers driven by a amplifier.
+5. There are four lines from the FPGA to the scaler CPU that convey status, these signals must be driven to power up the LCD.
+6. No dedicated "Pano button" is present. The power switch doubles as the "Pano button" (see below).
 
 ## LCD interface
 
@@ -122,6 +125,26 @@ Block 0, Base EDID:
 Checksum: 0xf6
 skip@Dell-7040:~/pano/edid-decode$
 ```
+
+## Status LED
+
+The following is copied from the operating manual for easy reference.
+
+The colour of the LED indicator changes as follows:
+|LED indicator | Status|
+| - | - |
+|blue |The Zero Client is switched on (Normal mode).|
+|green |The Zero Client is switched on (ECO mode).|
+|orange |Zero Client is in energy-saving mode.|
+|not lit |Zero Client is turned off.|
+|quickly flashing orange |Zero Client is getting IP address from DHCP server.|
+|slowly flashing orange |Zero Client has obtained IP address from the DHCP server and is establishing a connection with the Zero Client Controller.|
+|red |Zero Client has an error.|
+|flashing red |Zero Client has not found a network.|
+
+A long press on the on/off switch turns the device on or off.
+Press the on/off switch briefly to log out from the Virtual Desktop, i.e.
+simulate a press of the Pano button for the FPGA.
 
 ## Serial port
 
