@@ -146,12 +146,39 @@ A long press on the on/off switch turns the device on or off.
 Press the on/off switch briefly to log out from the Virtual Desktop, i.e.
 simulate a press of the Pano button for the FPGA.
 
+## Power and status control lines
+
+The Pano gateware communicates with the LCD controller using 4 signals.  The
+state of these signals determine how the LCD controller drives the power
+switch's LEDs, what messages it displays on the LCD, and if power is enabled to
+the LCD.
+
+UCF definitions:
+
+```
+# DZ22-2: outputs to the NT68668
+NET "pwr_status0" LOC = F8 | IOSTANDARD = LVCMOS33;
+NET "pwr_status1" LOC = F9 | IOSTANDARD = LVCMOS33;
+NET "pwr_status2" LOC = H10 | IOSTANDARD = LVCMOS33;
+NET "pwr_status3" LOC = H11 | IOSTANDARD = LVCMOS33;
+```
+
+| pwr_status<br>value | Power Switch | LCD |
+| - | - | - |
+| 0x0 | solid yellow | After timeout "no signal, going to sleep" |
+| 0x1 | flashing red | "no network available, please check network connection"|
+| 0x2 | fast flashing yellow | "connecting please wait"|
+| 0x3 | slow flashing yellow | "connecting please wait"|
+| 0x5 | solid green | Prior screen cleared, if no video "no signal, going to sleep" |
+| 0x4,<br>0x06 -> 0x0e | solid yellow | No change on screen, does not timeout w/o video |
+| 0xf | solid red | "reset necessary, please do a power cycle or contact your administer" |
+
+
 ## Serial port
 
-Pano_ldr is based on Ultraembedded's SOC platform which includes the ability to 
-load firmware over a serial port which is VERY HANDY for code development.  
-
-The serial port appears on the external monitor DVI connector.   Please see the [fpga_test_soc](https://github.com/skiphansen/fpga_test_soc/tree/master/fpga/panologic_g2#serial-port) for more information.
+Having a serial port is usefuly in more ways than can be described.  Unfortunately neither the regular Pano
+nor the DZ22-2 has one.  Howver the DDC lines on the external monitor DVI connector can be used for this
+purpose given suitable RTL.  Please see the [Panologic G2 serial port connections](https://github.com/tomverbeure/panologic-g2/wiki/Panologic-G2-serial-port-connections) for more information.
 
 ## Links
 
@@ -162,3 +189,4 @@ The serial port appears on the external monitor DVI connector.   Please see the 
 - SGM7222 USB switch [spec sheet](./assets/1640934749.pdf)
 - [NT68667FG spec sheet](./assets/NT68667FG_Novatek.pdf)
 - [Youtube video](https://www.youtube.com/watch?v=FunpjWlPepY) showing how to open it.
+
