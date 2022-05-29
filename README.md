@@ -41,6 +41,29 @@ It's probably an cockpit error on my part.
 
 ![](./assets/dz22_first_life.png)
 
+A prebuilt bitstream for this test is provided in the prebuilt subdirectory,
+the source is [here](http://github.com/skiphansen/panologic-g2/tree/DZ22-2_test).
+
+To run it on your DZ22-2
+
+1. Install [Pano_ldr](https://github.com/skiphansen/panog2_ldr)
+2. Install and configure a TFTP server on your network.
+3. Copy dz22_1080p_test.bin to your TFTP server.
+
+Then:
+```
+skip@Dell-7040:~$ telnet pano_ldr
+Trying 192.168.123.196...
+Connected to pano_ldr.lan.
+Escape character is '^]'.
+Pano LDR v0.02 compiled May 28 2022 10:49:09
+ldr> flash dz22_1080p_test.bin 0x900000
+................................................................
+
+Flashed 4221044 bytes
+ldr> reboot 0x900000
+Booting bitstream @ 0x900000
+```
 ## Differences from G2
 
 1. The red/green/blue LEDs on the G2 are not present, the LCD controller controls the LEDs behind the power switch.
