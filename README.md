@@ -3,7 +3,13 @@
 ![](https://github.com/skiphansen/pano_blocks/blob/master/assets/dz22_1.png)
 ![](https://github.com/skiphansen/pano_blocks/blob/master/assets/dz22_2.png)
 
-This project contains information about hacking the Fujitsu Zero Client DZ22-2
+This project contains information about hacking the Fujitsu Zero Client DZ22-2.
+
+The DZ22-2 isn't as plentify as the Pano thin clients, but I was able to find a
+new in the box DZ22-2 on ebay in March 2022! 
+
+As of this moment there are still a few used DZ22-2 listed on ebay for < $100.  
+While not the deal of the century it's not terrible either.
 
 This is an 22 in LCD monitor with a built in Pano device similar to the [Rev B G2](https://github.com/tomverbeure/panologic-g2/wiki/Identifying-different-Pano-generations-and-revisions#second-generation).  
 Please see Tom Verbeure's reverse engineering [project](https://github.com/tomverbeure/panologic-g2)
