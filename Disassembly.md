@@ -1,6 +1,6 @@
 # Dissassembling the DZ22-2
 
-I tired disassembling my DZ22-2 by following a [Youtube video](https://www.youtube.com/watch?v=FunpjWlPepY)
+I tried disassembling my DZ22-2 by following a [Youtube video](https://www.youtube.com/watch?v=FunpjWlPepY)
 that I found but I had no luck.  
 
 When I slipped and cut my hand I gave up and wrote [Pano_ldr](https://github.com/skiphansen/panog2_ldr)!  

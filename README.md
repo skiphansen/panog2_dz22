@@ -14,6 +14,8 @@ My [Pano_ldr](https://github.com/skiphansen/panog2_ldr) has been successfully in
 and tested on the DZ22-2 **WITHOUT** opening the case.  In fact the DZ22-2 was my motivation 
 for writting it.
 
+If want to disassemble the DZ22-2 here are some [notes](./Disassembly.md).
+
 ## Features
 
 - Based on the largest FPGA in the Spartan 6 family with 147,443k equivalent logic cells
@@ -188,5 +190,4 @@ purpose given suitable RTL.  Please see the [Panologic G2 serial port connection
 - [Citrix XenDesktop Manual](./assets/62122223.pdf)
 - SGM7222 USB switch [spec sheet](./assets/1640934749.pdf)
 - [NT68667FG spec sheet](./assets/NT68667FG_Novatek.pdf)
-- [Youtube video](https://www.youtube.com/watch?v=FunpjWlPepY) showing how to open it.
 
