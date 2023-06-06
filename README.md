@@ -34,6 +34,10 @@ If want to disassemble the DZ22-2 here are some [notes](./Disassembly.md).
 - DVI-D port for second monitor
 - digital screen controller with microprocessor for storing 12 different display modes
 
+## Projects for the DZ22
+- Generally any project for the [Pano G2](https://github.com/tomverbeure/panologic-g2/wiki#projects-for-the-second-generation-g2-pano-logic)
+- David Kuder's [Pano Term](https://github.com/dkgrizzly/pano_term)
+
 ## Status
 Tom's test code for the G2 with minor modifications is working on both the LCD and the external 
 monitor @ 1080p.  Attempts to change the resolution to 640x480 and 1680x1050 have failed so far.  
