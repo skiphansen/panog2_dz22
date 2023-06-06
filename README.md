@@ -160,6 +160,8 @@ Block 0, Base EDID:
 Checksum: 0xf6
 skip@Dell-7040:~/pano/edid-decode$
 ```
+Note: The DMT (**D**isplay **M**onitor **T**iming) modes are defined by the [VESA DMT Spec](https://glenwing.github.io/docs/VESA-DMT-1.13.pdf).
+
 
 ## Status LED
 
