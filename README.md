@@ -16,6 +16,8 @@ Please see Tom Verbeure's reverse engineering [project](https://github.com/tomve
 for the G2 and the [Pano Hacker's Wiki](https://github.com/tomverbeure/panologic-g2/wiki)
 for additional information.
 
+Unlike the G2 a [schematic](https://files.gitter.im/5db27fe4d73408ce4fcef29f/JYmW/PanoLogic_net_monitor_schematics.pdf) for the DZ-22 is available.
+
 My [Pano_ldr](https://github.com/skiphansen/panog2_ldr) has been successfully installed
 and tested on the DZ22-2 **WITHOUT** opening the case.  In fact the DZ22-2 was my motivation 
 for writting it.
